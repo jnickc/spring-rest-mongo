@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+</head>
+<body ng-app="myApp">
+<div class="container" ng-controller="AppController">
+    <div class="page-header">
+        <h1></h1>
+    </div>
+    <div class="alert alert-info" role="alert" ng-hide="items &amp;&amp; items.length > 0">
+        There are no items yet.
+    </div>
+    <form class="form-horizontal" role="form" ng-submit="submit()">
+        <div class="form-group" ng-repeat="item in items">
+            <div class="checkbox col-xs-9">
+                <label>
+                    <input type="checkbox" ng-model="item.checked" ng-change="updateItem(item)"/> {{item.description + '
+                    ' + item.name}}
+                </label>
+            </div>
+            <div class="col-xs-3">
+                <button class="pull-right btn btn-danger" type="button" title="Delete"
+                        ng-click="deleteItem(item)">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </div>
+        </div>
+        <hr/>
+        <div class="form-group">
+            <label for="placeOfBirth">Place of Birth:</label>
+            <input type="text" id="placeOfBirth" class="form-control" ng-model="placeOfBirth"
+                   placeholder="Enter the birth place..."
+                   required/>
+        </div>
+        <div class="form-group">
+            <label for="familyName">Family name:</label>
+            <input type="text" class="form-control" id="familyName" ng-model="familyName"
+                   placeholder="Enter family name"
+                   required/>
+        </div>
+        <div class="form-group">
+            <label for="givenName">Given name:</label>
+            <input type="text" class="form-control" id="givenName" ng-model="givenName" placeholder="Enter given name"
+                   required/>
+        </div>
+        <div class="form-group">
+            <label for="middleNames">Middle name:</label>
+            <input type="text" class="form-control" id="middleNames" ng-model="middleNames"
+                   placeholder="Enter middle name"
+                   required/>
+        </div>
+        <div class="form-group">
+            <label for="height">Height:</label>
+            <input type="text" class="form-control" id="height" ng-model="height" placeholder="Enter height"
+                   required/>
+        </div>
+        <div class="form-group">
+            <label for="twitterId">Twitter ID:</label>
+            <input type="text" class="form-control" id="twitterId" ng-model="twitterId" placeholder="Enter twitter ID"
+                   required/>
+        </div>
+        <div class="form-group">
+            <label for="dateOfBirth">Birth date:</label>
+            <input type="date" class="form-control" id="dateOfBirth" ng-model="dateOfBirth"
+                   placeholder="Enter birth date"
+                   required/>
+        </div>
+        <div class="form-group">
+            <label for="dateOfDeath">Date of death:</label>
+            <input type="date" class="form-control" id="dateOfDeath" ng-model="dateOfDeath"
+                   placeholder="Enter date of death"
+                   required/>
+        </div>
+
+        <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid" title="Add">Submit</button>
+
+    </form>
+</div>
+<script type="text/javascript" src="./angular/angular.min.js"></script>
+<script type="text/javascript" src="./angular/angular-resource.min.js"></script>
+<script type="text/javascript" src="./lodash/lodash.min.js"></script>
+<script type="text/javascript" src="./appPerson/app.js"></script>
+<script type="text/javascript" src="./appPerson/controllers.js"></script>
+<script type="text/javascript" src="./appPerson/services.js"></script>
+</body>
+</html>
