@@ -1,12 +1,12 @@
-package be.g00glen00b.controller;
+package spring.rest.controller;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import be.g00glen00b.model.Item;
-import be.g00glen00b.repository.ItemRepository;
+import spring.rest.model.Item;
+import spring.rest.repository.ItemRepository;
 
 @RestController
 @RequestMapping("/items")

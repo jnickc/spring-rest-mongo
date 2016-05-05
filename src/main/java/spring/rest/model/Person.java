@@ -1,4 +1,4 @@
-package be.g00glen00b.model;
+package spring.rest.model;
 
 
 import org.springframework.data.annotation.Id;

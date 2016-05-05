@@ -1,13 +1,13 @@
-package be.g00glen00b.controller;
+package spring.rest.controller;
 
 
 import java.util.List;
 
-import be.g00glen00b.model.Person;
+import spring.rest.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import be.g00glen00b.repository.PersonRepository;
+import spring.rest.repository.PersonRepository;
 
 @RestController
 @RequestMapping("/persons")

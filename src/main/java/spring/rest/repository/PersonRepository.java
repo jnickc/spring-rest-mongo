@@ -1,6 +1,6 @@
-package be.g00glen00b.repository;
+package spring.rest.repository;
 
-import be.g00glen00b.model.Person;
+import spring.rest.model.Person;
 
 
 import org.springframework.data.mongodb.repository.MongoRepository;

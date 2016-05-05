@@ -1,8 +1,7 @@
-package be.g00glen00b.repository;
+package spring.rest.repository;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
-import be.g00glen00b.model.Item;
+import spring.rest.model.Item;
 
 import java.util.List;
 
